@@ -3,7 +3,8 @@
 /* Noto Sans KR, 나눔스퀘어*/
 
 :root {
-  --background: #FFF9F9;
+  --background: #F9F1F1;
+  --box-bg: #FFF9F9;
   --btn: #FF9090;
   --active-li: #ECE4E4;
   --completed-li: #C1B8B8;
@@ -17,14 +18,14 @@
 }
 
 html.dark {
-  --background: #534D4D;
+  --background: #272727;
+  --box-bg: #534D4D;
   --btn: #C0ADAD;
   --active-li: #1F1616;
   --completed-li: #494242;
   --active-txt: #FFF5F5;
   --completed-txt: #827C7C;
   --shadow: 0px 4px 20px 13px rgba(0, 0, 0, 0.08);
-
 }
 body {
   margin: 0;
@@ -35,14 +36,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--background);
 }
 
 #root {
+  /* display: flex;
+  justify-content: space-between; */
   width: 1000px;
   height: 520px;
   border-radius: 20px;
   box-shadow: var(--shadow); 
-  background-color: var(--background);
+  background-color: var(--box-bg);
 }
 
 code {
