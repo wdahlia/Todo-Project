@@ -1,4 +1,5 @@
 import './App.css';
+import AddTodo from './components/AddTodo/AddTodo';
 import Nav from './components/Nav/Nav';
 import { DarkModeProvider } from './context/DarkModeContext';
 
@@ -7,6 +8,7 @@ function App() {
   return (
     <DarkModeProvider>
       <Nav/>
+      <AddTodo/>
     </DarkModeProvider>
   );
 }

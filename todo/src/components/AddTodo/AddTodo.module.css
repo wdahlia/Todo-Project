@@ -1,0 +1,32 @@
+.form {
+  position: relative;
+  right: 0;
+  left: 350px;
+  width: 600px;
+  bottom: 10px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.input {
+  background-color: var(--input);
+  /* box-shadow: var(--shadow); */
+  padding: 0.5rem 2rem;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.btn {
+  position: absolute;
+  right: 0px;
+  background-color: var(--btn);
+  width: 80px;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  text-transform: lowercase;
+  color: var(--completed-txt);
+  font-weight: 700;
+  letter-spacing: -1px;
+}

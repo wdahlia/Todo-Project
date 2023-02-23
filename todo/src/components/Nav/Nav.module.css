@@ -21,6 +21,7 @@
   letter-spacing: 1px;
 }
 
+
 .tab li {
   position: relative;
   padding: 0 1.5rem 1rem 1.5rem;
@@ -30,7 +31,6 @@
 .tab li:first-child {
   padding-top: 1rem;
 }
-
 
 /* tab li hover 했을때 밑에 선 생기게 만들기 */
 
@@ -53,6 +53,10 @@
 
 .tab li:last-child::after {
   width: calc(50%);
+}
+
+.tab li:hover {
+  color: var(--btn);
 }
 
 .tab li:hover::after {
