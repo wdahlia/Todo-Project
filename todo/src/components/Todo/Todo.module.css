@@ -6,6 +6,7 @@
   background-color: var(--active-li);
   /* box-shadow: var(--shadow); */
   border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
 
 /* input[type="checkbox"] {

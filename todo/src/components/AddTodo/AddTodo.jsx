@@ -16,8 +16,8 @@ export default function AddTodo({ onAdd }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // submit 기본 동작 막아두기
-    console.log(uuidv4(), text);
-    // onAdd({ id: uuidv4(), text, status: 'active'});
+    // console.log(uuidv4(), text);
+    onAdd({ id: uuidv4(), text, status: 'active'});
     // uuidv4 사용 2.71 * 10^18 개의 UUID를 생성했을 때 최소 1개가 중복(충돌) 될 확률이 약 50%
     // 즉 값이 중복될 가능성이 현저히 적음 // 고유 코드로 사용 가능
     // id값, text, status를 저장해서 상위 컴포넌트에 던져주게 된다
