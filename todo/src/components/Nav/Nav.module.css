@@ -1,4 +1,7 @@
 .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   top: 30px;
   left: 30px;
@@ -7,4 +10,64 @@
   border-radius: 20px;
   background-color: var(--box-bg);
   box-shadow: var(--shadow);
+}
+
+.tab {
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  color: var(--active-txt);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tab li {
+  position: relative;
+  padding: 0 1.5rem 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.tab li:first-child {
+  padding-top: 1rem;
+}
+
+
+/* tab li hover 했을때 밑에 선 생기게 만들기 */
+
+.tab li::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: calc(30%);
+  left: auto;
+  bottom: 0.75rem;
+  border-top: 2.4px solid var(--btn);
+  padding-bottom: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.tab li:first-child::after {
+  width: calc(17%);
+}
+
+.tab li:last-child::after {
+  width: calc(50%);
+}
+
+.tab li:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.toggle {
+  display: inline-block;
+  color: var(--btn);
+  font-size: 1.5rem;
+  border-radius: 20px;
+  width: 50px;
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  text-align: start;
+  cursor: pointer;
 }

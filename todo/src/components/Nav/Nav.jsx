@@ -11,7 +11,7 @@ export default function Nav() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
     <nav className={styles.nav}>
-      <ul>
+      <ul class={styles.tab}>
         <li>All</li>
         <li>Active</li>
         <li>Completed</li>
