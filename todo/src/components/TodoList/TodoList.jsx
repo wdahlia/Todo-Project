@@ -10,7 +10,10 @@ export default function TodoList() {
     // input에 submit 된 값을 받아와서 그 인자는 todo, todo리스트를 업데이트 하는 로직 작성
   }
   return (
-    <AddTodo onAdd={handleAdd} />
+    <>
+      <Todo />
+      <AddTodo onAdd={handleAdd} />
+    </>
   );
 }
 
