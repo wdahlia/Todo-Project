@@ -68,6 +68,7 @@ input {
 #root {
   /* display: flex;
   justify-content: space-between; */
+  position: relative;
   width: 1000px;
   height: 520px;
   border-radius: 20px;

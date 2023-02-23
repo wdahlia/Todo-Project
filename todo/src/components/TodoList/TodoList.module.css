@@ -1,0 +1,12 @@
+.section {
+  position: absolute;
+  top: 30px;
+  left: 350px;
+}
+.article {
+  /* display: flex;
+  flex-direction: column; */
+  width: 620px;
+  height: 420px;
+  padding: 1rem;
+}

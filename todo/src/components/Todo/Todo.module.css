@@ -1,0 +1,19 @@
+.todoLi {
+  display: flex;
+  justify-content: space-between;
+  max-width: 580px;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--active-li);
+  /* box-shadow: var(--shadow); */
+  border-radius: 10px;
+}
+
+/* input[type="checkbox"] {
+  /* display: none; */
+
+input[type="checkbox"]:checked ~ .todoLi {
+  background-color: var(--completed-li);
+}
+input[type="checkbox"]:checked + .label {
+  color: var(--completed-txt);
+}

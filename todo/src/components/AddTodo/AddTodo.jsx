@@ -31,7 +31,7 @@ export default function AddTodo({ onAdd }) {
       className={styles.input}
       value={text}
       onChange={handleValue}
-      spellcheck="false"/>
+      spellCheck="false"/>
       <button className={styles.btn}></button>
     </form>
   );
