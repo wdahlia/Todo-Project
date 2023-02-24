@@ -1,20 +1,86 @@
 .todoLi {
   display: flex;
   justify-content: space-between;
-  max-width: 580px;
-  padding: 0.5rem 1.5rem;
-  background-color: var(--active-li);
-  /* box-shadow: var(--shadow); */
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-/* input[type="checkbox"] {
-  /* display: none; */
-
-input[type="checkbox"]:checked ~ .todoLi {
-  background-color: var(--completed-li);
+input[type="checkbox"] {
+  display: none;
 }
+
 input[type="checkbox"]:checked + .label {
   color: var(--completed-txt);
+  background-color: var(--completed-li);
+  text-decoration: line-through;
+}
+input[type="checkbox"]:checked + .label::before {
+  background-color: #939393;
+}
+
+input[type="checkbox"]:checked + .label::after {
+  visibility: visible;
+}
+
+.label {
+  font-family: 'NanumSquare';
+  position: relative;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--active-txt);
+}
+
+.label::before {
+  content: '';
+  display: inline-block;
+  border-radius: 100%;
+  background-color: var(--check);
+  width: 35px;
+  height: 35px;
+  box-shadow: var(--shadow-li);
+}
+
+.label::after {
+  visibility: hidden;
+  position: absolute;
+  content: '\f00c';
+  top: 15px;
+  left: 30px;
+  z-index: 10;
+  color: #BEB3B3;
+  font-family: FontAwesome;
+  display: inline-block;
+  border-radius: 100%;
+  font-size: 1.5rem;
+}
+
+.label {
+  max-width: 580px;
+  padding: 0.55rem 1.5rem;
+  background-color: var(--active-li);
+  box-shadow: var(--shadow-li);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  column-gap: 20px; 
+  align-items: center;
+}
+
+/* .del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-li);
+} */
+
+.del .delicon {
+  font-size: 1.7rem;
+  color: var(--btn);
+} 
+
+.del .delicon:hover {
+  transform: rotate(35deg);
 }

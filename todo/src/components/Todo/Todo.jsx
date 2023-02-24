@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Todo.module.css';
-import { FaTrash } from "react-icons/fa";
-import { BsCheckLg } from "react-icons/bs";
+import { FaTrash } from 'react-icons/fa';
+import { FiTrash2 } from 'react-icons/fi';
+import { HiTrash } from 'react-icons/hi';
 
 // li 부분 컴포넌트 생성
 // 체크박스 input 부분, todo content 부분, 휴지통 icon 부분
@@ -20,14 +21,11 @@ export default function Todo({ todo }) {
       // onChange={handleUpdate}
       />
       <label htmlFor={id} className={styles.label}>
-        <span className={styles.check}>
-          <BsCheckLg />
-        </span>
         {text}
       </label>
       <span className={styles.del}>
         <button onClick={handleDelete}>
-          <FaTrash />
+          <HiTrash className={styles.delicon}/>
         </button>
       </span>
     </li>
