@@ -35,8 +35,8 @@ input[type="checkbox"]:checked + .label::after {
   display: inline-block;
   border-radius: 100%;
   background-color: var(--check);
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   box-shadow: var(--shadow-li);
 }
 
@@ -44,9 +44,9 @@ input[type="checkbox"]:checked + .label::after {
   visibility: hidden;
   position: absolute;
   content: '\f00c';
-  top: 15px;
-  left: 30px;
-  z-index: 10;
+  top: 12px;
+  left: 25px;
+  /* z-index: 10; */
   color: #BEB3B3;
   font-family: FontAwesome;
   display: inline-block;
@@ -56,13 +56,13 @@ input[type="checkbox"]:checked + .label::after {
 
 .label {
   max-width: 580px;
-  padding: 0.55rem 1.5rem;
+  padding: 0.45rem 1.3rem;
   background-color: var(--active-li);
   box-shadow: var(--shadow-li);
   border-radius: 20px;
-  cursor: pointer;
   display: flex;
   column-gap: 20px; 
+  cursor: pointer;
   align-items: center;
 }
 
@@ -79,6 +79,7 @@ input[type="checkbox"]:checked + .label::after {
 .del .delicon {
   font-size: 1.7rem;
   color: var(--btn);
+  cursor: pointer;
 } 
 
 .del .delicon:hover {
