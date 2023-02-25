@@ -9,19 +9,26 @@ export default function AddTodo({ onAdd }) {
   const [text, setText] = useState('');
   const handleValue = (e) => {
     // 즉 value값의 변화 인자를 setText 안에 넣어주어야 하므로 로직 작성
-    console.log(e.target.value);
+    // console.log(e.target.value);
     // 입력되는 값들이 value 안에 들어가짐
     setText(e.target.value);
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    // submit 기본 동작 막아두기
-    // console.log(uuidv4(), text);
-    onAdd({ id: uuidv4(), text, status: 'active'});
-    // uuidv4 사용 2.71 * 10^18 개의 UUID를 생성했을 때 최소 1개가 중복(충돌) 될 확률이 약 50%
-    // 즉 값이 중복될 가능성이 현저히 적음 // 고유 코드로 사용 가능
-    // id값, text, status를 저장해서 상위 컴포넌트에 던져주게 된다
-    setText(''); // setText를 비워준다
+    if (text.trim().length > 30 || text.trim().length === 0) {
+      // 30자 초과하던지, 빈칸으로 제출 했을 때 return 즉 함수 끝남
+      setText('');
+      return;
+    } else {
+      // submit 기본 동작 막아두기
+      // console.log(uuidv4(), text);
+      onAdd({ id: uuidv4(), text, status: 'active'});
+      // uuidv4 사용 2.71 * 10^18 개의 UUID를 생성했을 때 최소 1개가 중복(충돌) 될 확률이 약 50%
+      // 즉 값이 중복될 가능성이 현저히 적음 // 고유 코드로 사용 가능
+      // id값, text, status를 저장해서 상위 컴포넌트에 던져주게 된다
+      setText('');
+    }
+    
   };
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
