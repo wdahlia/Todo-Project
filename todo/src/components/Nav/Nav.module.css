@@ -47,7 +47,7 @@ li {
 
 .btn.filter:hover::after {
   position: absolute;
-  top: 49px;
+  top: 49.5px;
   left: auto;
   display: block;
   content: '';
@@ -73,7 +73,7 @@ li:last-child .btn.filter::after {
 .btn:hover::after {
   display: block;
   position: absolute;
-  top: 50px;
+  top: 49.5px;
   content: '';
   width: calc(35%);
   left: auto;
@@ -81,6 +81,7 @@ li:last-child .btn.filter::after {
   border-top: 2.4px solid var(--btn);
   padding-bottom: 1px;
   animation: show 0.4s ease-in-out;
+  transform-origin: left;
 }
 
 li:first-child .btn:hover::after {
@@ -94,8 +95,10 @@ li:last-child .btn:hover::after {
 @keyframes show {
   0% {
     transform: scaleX(0);
+    /* transform-origin: left; */
   } 100% {
     transform: scaleX(1);
+    /* transform-origin: left; */
   }
 }
 
