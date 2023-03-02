@@ -20,7 +20,7 @@ export default function TodoList() {
     setTodos(todos.map((todo) => (todo.id === change.id ? change : todo)));
   }
   const handleDelete = (del) => {
-    console.log(del);
+    // console.log(del);
     setTodos(todos.filter((todo) => (todo.id !== del.id)))
     // delete 되었을 때 todo가 삭제되고 나머지 값들을 return
   }
@@ -29,6 +29,7 @@ export default function TodoList() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos])
 
+  // return 부분에서 todos.filter 사용해서 각 filter 값을 받아왔을 때, 그 친구들 리스트만 보여주게끔 구현
   return (
     <section className={styles.section}>
       <article className={styles.article}>

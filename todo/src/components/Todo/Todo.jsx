@@ -12,7 +12,7 @@ export default function Todo({ todo, onStateChange, onDelete }) {
     onStateChange({ ...todo, status });
   }
   const handleDelete = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     const delTodo = e.target.value;
     onDelete({ ...todo, delTodo });
   }
