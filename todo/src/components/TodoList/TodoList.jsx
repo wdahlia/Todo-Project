@@ -5,7 +5,7 @@ import styles from './TodoList.module.css';
 
 // ul 부분의 컴포넌트 작성
 // TodoList 컴포넌트 내에 Todo 컴포넌트 배치 
-export default function TodoList() {
+export default function TodoList({ filter }) {
   // todolist의 경우 add 되는 친구들을 useState 상태 변경 시켜주어야함
   const [todos, setTodos] = useState(() => readTodo());
   const handleAdd = (todo) => {
@@ -29,12 +29,14 @@ export default function TodoList() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos])
 
+
+  const filteredItem = getFilterTodoItems(todos, filter);
   // return 부분에서 todos.filter 사용해서 각 filter 값을 받아왔을 때, 그 친구들 리스트만 보여주게끔 구현
   return (
     <section className={styles.section}>
       <article className={styles.article}>
         <ul>
-          {todos.map((item) => (
+          {filteredItem.map((item) => (
             <Todo 
             todo={item}
             key={item.id}
@@ -53,4 +55,14 @@ function readTodo() {
   // localstorage에서 todos아이템을 읽어오고
   // todos가 있다면 json으로 todos를 뱉어주고 아니면 빈 배열을 뱉어주기
   return todos ? JSON.parse(todos) : [];
+}
+
+// filter해서 return 해줄 값들 정의
+function getFilterTodoItems(todos, filter) {
+  // 만약 all이다 그럼 todos를 모두 return 해준다
+  if (filter === 'all') {
+    return todos;
+  }
+  console.log(todos);
+  return todos.filter((todo) => todo.status === filter);
 }

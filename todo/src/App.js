@@ -5,7 +5,7 @@ import TodoList from './components/TodoList/TodoList';
 import { DarkModeProvider } from './context/DarkModeContext';
 
 // 상위에서 props로 filters를 전달 해주어야함, TodoList 출력 부분과 Nav에 나와야하기 때문
-const filters = ['All', 'Active', 'Completed'];
+const filters = ['all', 'active', 'completed'];
 // darkmode, lightmode 변경 될 container 부분
 function App() {
   const [filter, setFilter] = useState(filters[0]);
@@ -16,7 +16,7 @@ function App() {
   return (
     <DarkModeProvider>
       <Nav filters={filters} filter={filter} onFilterChange={setFilter}/>
-      <TodoList/>
+      <TodoList filter={filter}/>
     </DarkModeProvider>
   );
 }
