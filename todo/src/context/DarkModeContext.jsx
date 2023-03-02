@@ -20,7 +20,6 @@ export function DarkModeProvider({ children }) {
     changeMode(isDark);
   }, [])
 
-
   // dark mode의 실행 조건, 브라우저가 다크모드인 경우, 내가 토글한 아이콘의 테마가 darkmode일 경우
   return(
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
