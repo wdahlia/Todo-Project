@@ -14,6 +14,16 @@ export default function TodoList() {
     // console.log(todos);
     // input에 submit 된 값을 받아와서 그 인자는 todo, todo리스트를 업데이트 하는 로직 작성
   }
+  const handleStateChange = (change) => {
+    // console.log(change);
+    // checked 되었을 때 state가 completed로 변경된 상태를 저장해주어야함
+    setTodos(todos.map((todo) => (todo.id === change.id ? change : todo)));
+  }
+  const handleDelete = (del) => {
+    console.log(del);
+    setTodos(todos.filter((todo) => (todo.id !== del.id)))
+    // delete 되었을 때 todo가 삭제되고 나머지 값들을 return
+  }
   // todo의 목록들이 localStorage에 저장되어야 하고 렌더링 될때마다, 원래 있던 todos를 보여줘야함
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -26,7 +36,9 @@ export default function TodoList() {
           {todos.map((item) => (
             <Todo 
             todo={item}
-            key={item.id}/>
+            key={item.id}
+            onStateChange={handleStateChange}
+            onDelete={handleDelete}/>
           ))}
         </ul>
       </article>
