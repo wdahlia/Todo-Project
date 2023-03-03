@@ -10,7 +10,7 @@
 ![ezgif-2-e0d207b91f](https://user-images.githubusercontent.com/108653518/222407255-cd47b0ad-0341-4ee6-bb80-a17502fe19aa.gif)
 
 + 할 일 스크롤이 아닌 Pagination 기능 추가 예정
-+ 배포 예정
++ 반응형 디자인 구성
 
 ### 컴포넌트 구성 순서
 - container
@@ -33,6 +33,16 @@
 	- todo add 하는 input text 부분
 	- submit시 todo input 글자 수 제한 처리 해주기
 		- 즉, 글자 수 넘기면 submit 안되고 todo 생성 안되게끔
+- Pagination
+  - 각 filter마다 달라지는 개수 고려해야함
+  - 컴포넌트가 어디에 위치해야 하는지
+  - 할 일 5개씩 보여줄 것
+  - 페이지가 바뀔 때 마다, 원형 버튼 색상 변경
+  - 마우스 왼쪽 스크롤 가능하게 만들 수 있는지
+- 반응형 태블릿 사이즈, 모바일 사이즈 구현
+  - figma에 디자인 추가
+  - **태블릿**의 경우 PC와 같은 화면
+  - **모바일**의 경우 탭바가 가로로 변경
 
 <br />
 
