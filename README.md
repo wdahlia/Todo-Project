@@ -7,10 +7,19 @@
 
 [Figma 설계](https://www.figma.com/file/OgvFaRLxQeAQ4pKSFpGV85/To-Do-List?node-id=1%3A31&t=xDk5xXifWSqS7JqV-1)
 
+### 반응형 디자인
+
+#### 데스크탑
 ![ezgif-2-e0d207b91f](https://user-images.githubusercontent.com/108653518/222407255-cd47b0ad-0341-4ee6-bb80-a17502fe19aa.gif)
 
+#### 태블릿
+![ezgif-4-f61060a346](https://user-images.githubusercontent.com/108653518/222894139-65ea78ee-f8aa-4212-9881-75f22a49f727.gif)
+
+#### 모바일
+![ezgif-4-f405319dcd](https://user-images.githubusercontent.com/108653518/222894147-15df4b44-8e42-4b1b-a98c-6aafd9a01921.gif)
+
+
 + 할 일 스크롤이 아닌 Pagination 기능 추가 예정
-+ 반응형 디자인 구성
 
 ### 컴포넌트 구성 순서
 - container
