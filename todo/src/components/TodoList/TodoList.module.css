@@ -18,7 +18,7 @@
 }
 
 /* 모바일 사이즈 todolist 구성 */
-@media (max-width: 767px)  {
+@media only screen and (max-width: 767px)  {
   .section {
     top: 120px;
     left: 8px;
@@ -27,6 +27,20 @@
   .article {
     width: 23rem;
     height: 29rem;
+
+  }
+}
+
+/* 태블릿 사이즈 TodoList 구현 */
+@media only screen and (max-width: 1023px)  {
+  .section {
+    top: 120px;
+    left: 8px;
+  }
+
+  .article {
+    width: 46.5rem;
+    height: 35rem;
 
   }
 }

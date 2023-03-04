@@ -87,7 +87,7 @@ input[type="checkbox"]:checked + .label::after {
 }
 
 /* 모바일 사이즈 todo 구성 */
-@media (max-width: 767px)  {
+@media only screen and (max-width: 767px)  {
 
   .todoLi {
     margin-bottom: 1.47rem;
@@ -113,5 +113,35 @@ input[type="checkbox"]:checked + .label::after {
     top: 9px;
     left: 15px;
     font-size: 1rem;
+  }
+}
+
+/* 태블릿 사이즈 todo 구성 */
+@media only screen and (max-width: 1023px)  {
+
+  .todoLi {
+    margin-bottom: 1.7rem;
+  }
+
+  .label::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .label {
+    font-size: 1.2rem;
+    max-width: 30rem;
+    column-gap: 30px;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .del .delicon {
+    font-size: 1.45rem;
+  }
+
+  .label::after {
+    top: 16px;
+    left: 28px;
+    font-size: 1.4rem;
   }
 }

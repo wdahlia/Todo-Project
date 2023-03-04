@@ -44,10 +44,19 @@
 }
 
 /* 모바일 사이즈 addTodo 구성 */
-@media (max-width: 767px)  {
+@media only screen and (max-width: 767px)  {
   .form {
     left: 0.5rem;
     bottom: 75px;
     width: 21rem;
+  }
+}
+
+/* 태블릿 사이즈 addTodo 구성 */
+@media only screen and (max-width: 1023px)  {
+  .form {
+    left: 0.89rem;
+    bottom: 70px;
+    width: 43rem;
   }
 }

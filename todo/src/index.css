@@ -85,12 +85,21 @@ input {
 }
 
 /* 모바일 사이즈 root 구성 */
-@media (max-width: 767px)  {
+@media only screen and (max-width: 767px)  {
   #root {
     width: 23rem;
     height: 44rem;
   }
 }
+
+/* 태블릿 사이즈 root 구현 */
+@media only screen and (max-width: 1023px)  {
+  #root {
+    width: 46rem;
+    height: 50rem;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
