@@ -90,7 +90,7 @@ input[type="checkbox"]:checked + .label::after {
 @media only screen and (max-width: 767px)  {
 
   .todoLi {
-    margin-bottom: 1.47rem;
+    margin-bottom: 0.95rem;
   }
 
   .label::before {
@@ -99,7 +99,7 @@ input[type="checkbox"]:checked + .label::after {
   }
 
   .label {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     max-width: 18rem;
     column-gap: 10px;
     padding: 0.7rem 0.78rem;
@@ -110,14 +110,14 @@ input[type="checkbox"]:checked + .label::after {
   }
 
   .label::after {
-    top: 9px;
-    left: 15px;
+    top: 0.85rem;
+    left: 14.5px;
     font-size: 1rem;
   }
 }
 
 /* 태블릿 사이즈 todo 구성 */
-@media only screen and (max-width: 1023px)  {
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
 
   .todoLi {
     margin-bottom: 1.7rem;

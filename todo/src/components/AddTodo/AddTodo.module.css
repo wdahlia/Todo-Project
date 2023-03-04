@@ -53,7 +53,7 @@
 }
 
 /* 태블릿 사이즈 addTodo 구성 */
-@media only screen and (max-width: 1023px)  {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .form {
     left: 0.89rem;
     bottom: 70px;

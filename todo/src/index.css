@@ -28,10 +28,6 @@
   user-select:none
 }
 
-html {
-  width: 100vw;
-  height: 100vh;
-}
 
 html.dark {
   --background: #272727;
@@ -74,6 +70,7 @@ input {
   border: none;
   background-color: initial;
 }
+
 #root {
   /* justify-content: space-between; */
   position: relative;
@@ -93,15 +90,9 @@ input {
 }
 
 /* 태블릿 사이즈 root 구현 */
-@media only screen and (max-width: 1023px)  {
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
   #root {
     width: 46rem;
     height: 50rem;
   }
-}
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
