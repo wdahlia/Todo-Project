@@ -28,6 +28,11 @@
   user-select:none
 }
 
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
 html.dark {
   --background: #272727;
   --box-bg: #534D4D;
@@ -70,14 +75,21 @@ input {
   background-color: initial;
 }
 #root {
-  /* display: flex;
-  justify-content: space-between; */
+  /* justify-content: space-between; */
   position: relative;
   width: 1000px;
   height: 520px;
   border-radius: 20px;
   box-shadow: var(--shadow); 
   background-color: var(--box-bg);
+}
+
+/* 모바일 사이즈 root 구성 */
+@media (max-width: 767px)  {
+  #root {
+    width: 23rem;
+    height: 44rem;
+  }
 }
 
 code {

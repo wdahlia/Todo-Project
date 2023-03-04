@@ -42,3 +42,12 @@
   font-weight: 700;
   letter-spacing: -1px;
 }
+
+/* 모바일 사이즈 addTodo 구성 */
+@media (max-width: 767px)  {
+  .form {
+    left: 0.5rem;
+    bottom: 75px;
+    width: 21rem;
+  }
+}

@@ -85,3 +85,33 @@ input[type="checkbox"]:checked + .label::after {
 .del .delicon:hover {
   transform: rotate(35deg);
 }
+
+/* 모바일 사이즈 todo 구성 */
+@media (max-width: 767px)  {
+
+  .todoLi {
+    margin-bottom: 1.47rem;
+  }
+
+  .label::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .label {
+    font-size: 0.8rem;
+    max-width: 18rem;
+    column-gap: 10px;
+    padding: 0.7rem 0.78rem;
+  }
+
+  .del .delicon {
+    font-size: 1.2rem;
+  }
+
+  .label::after {
+    top: 9px;
+    left: 15px;
+    font-size: 1rem;
+  }
+}

@@ -7,6 +7,7 @@
   left: 350px;
   height: 88%;
 }
+
 .article {
   /* display: flex;
   flex-direction: column; */
@@ -14,4 +15,18 @@
   height: 393.5px;
   padding: 0.2rem 1rem;
   overflow-y: scroll;
+}
+
+/* 모바일 사이즈 todolist 구성 */
+@media (max-width: 767px)  {
+  .section {
+    top: 120px;
+    left: 8px;
+  }
+
+  .article {
+    width: 23rem;
+    height: 29rem;
+
+  }
 }
