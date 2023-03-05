@@ -22,10 +22,10 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.5s ease-out;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 
